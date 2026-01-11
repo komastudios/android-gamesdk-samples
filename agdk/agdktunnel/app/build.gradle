@@ -28,11 +28,11 @@ def playcoreDir = file('libs/play-core-native-sdk')
 
 android {
     compileSdkVersion 30
-    ndkVersion '23.1.7779620'
+    ndkVersion '23.2.8568313'
 
     defaultConfig {
         applicationId 'com.google.sample.agdktunnel'
-        minSdkVersion 24
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode     1
         versionName    '1.0.4'

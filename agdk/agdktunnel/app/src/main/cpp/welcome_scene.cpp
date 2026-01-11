@@ -99,8 +99,10 @@ void WelcomeScene::InitAboutText(JNIEnv* env, jobject context) {
     std::string versionName;
     agdk_samples_util::GetAppVersionInfo(env, context, nullptr, &versionName);
     aboutStream << "\nApp Version: " << versionName;
+#if __ANDROID_API__ >= 24
     aboutStream << "\nTarget SDK Version: "
                 << android_get_application_target_sdk_version();
+#endif
     aboutStream << "\nDevice OS Version: " << android_get_device_api_level();
     sAboutStartText = aboutStream.str();
 }

@@ -762,10 +762,10 @@ void DemoScene::RenderPanel_MotionTab(const int32_t controllerIndex,
         motionData[5] = mGyroscopeData[2];
     }
 
-    if (ImGui::BeginTable("##motiontable", 2, ImGuiTableFlags_ColumnsWidthFixed,
+    if (ImGui::BeginTable("##motiontable", 2, ImGuiTableFlags_SizingFixedFit,
                           ImVec2(0.0f, ImGui::GetTextLineHeightWithSpacing() * 4.5f))) {
-        ImGui::TableSetupColumn("Accelerometer   ", ImGuiTableColumnFlags_WidthAutoResize);
-        ImGui::TableSetupColumn("Gyroscope  ", ImGuiTableColumnFlags_WidthAutoResize);
+        ImGui::TableSetupColumn("Accelerometer   ", ImGuiTableColumnFlags_WidthFixed | ImGuiTableColumnFlags_NoResize);
+        ImGui::TableSetupColumn("Gyroscope  ", ImGuiTableColumnFlags_WidthFixed | ImGuiTableColumnFlags_NoResize);
         ImGui::TableHeadersRow();
         for (size_t i = 0; i < 4; ++i) {
             ImGui::TableNextRow();

@@ -11,5 +11,3 @@ build
 **/.project
 **/.settings
 .classpath
-third_party/imgui
-**/assets/no_asset_packs_textures
